@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Khi click vào nút Open Modal, một hộp chứa dòng text “Some text in the Modal” sẽ được hiển thị ra và màn hình xung quanh phải tối đi
+
+Khi click vào nút “x” hoặc màn hình tối xung quanh, Modal ở trên phải ẩn đi -->
+    <div id="change" style="width: 100vw; height: 100vh">
+      <h1 id="text">Modal Example</h1>
+      <button id="showText">Open Model</button>
+      <div
+        id="boxText"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          margin-left: 40vw;
+          width: 25vw;
+          height: 50px;
+          border: 1px solid black;
+          visibility: hidden;
+          background-color: rgb(76, 125, 125);
+        "
+      >
+        asdasd
+        <button
+          id="close"
+          style="
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: none;
+            cursor: pointer;
+          "
+        >
+          x
+        </button>
+      </div>
+    </div>
+    <script>
+      let showText = document.getElementById("showText");
+      let boxText = document.getElementById("boxText");
+      let close = document.getElementById("close");
+      let change = document.getElementById("change");
+
+      //   console.log(change);
+      showText.addEventListener("click", () => {
+        boxText.style.visibility = "visible";
+        change.style.backgroundColor = "rgb(81, 70, 70)";
+      });
+      close.addEventListener("click", () => {
+        boxText.style.visibility = "hidden";
+        change.style.backgroundColor = "white";
+      });
+    </script>
+  </body>
+</html>

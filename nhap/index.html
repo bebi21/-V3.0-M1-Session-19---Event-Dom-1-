@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo">Nội dung có thể bị ẩn hoặc hiện.</p>
+    <button id="showButton">Hiện</button>
+    <button id="hideButton">Ẩn</button>
+    <div id="text">bbb</div>
+
+    <script>
+      document
+        .getElementById("showButton")
+        .addEventListener("click", function () {
+          document.getElementById("demo").style.display = "block";
+        });
+
+      document
+        .getElementById("hideButton")
+        .addEventListener("click", function () {
+          document.getElementById("demo").style.display = "none";
+        });
+
+      document.getElementById("text").innerHTML = "meomeo";
+      document.getElementById("text").style.color = "green";
+    </script>
+  </body>
+</html>

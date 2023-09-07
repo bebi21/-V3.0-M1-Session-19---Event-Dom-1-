@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thay Đổi Màu Nền</title>
+  </head>
+  <body>
+    <h1>Thay Đổi Màu Nền</h1>
+    <p>Nhấn nút bên dưới để thay đổi màu nền của trang web.</p>
+    <!-- <button id="changeColorButton">Thay Đổi Màu Nền</button> -->
+    <div id="thayDoiMauNenTuDong"></div>
+
+    <script>
+      // let colors = [
+      //   "red",
+      //   "green",
+      //   "blue",
+      //   "yellow",
+      //   "purple",
+      //   "orange",
+      //   "pink",
+      // ];
+      // let currentColorIndex = 0;
+
+      // let changeColorButton = document.getElementById("changeColorButton");
+
+      // changeColorButton.addEventListener("click", thayDoiMauNen);
+
+      // function thayDoiMauNen() {
+      //   let body = document.body;
+      //   body.style.backgroundColor = colors[currentColorIndex];
+
+      //   currentColorIndex = (currentColorIndex + 1) % colors.length;
+      //   console.log(currentColorIndex);
+
+      // }
+      setInterval(autorun, 1000);
+      let colors = [
+        "red",
+        "green",
+        "blue",
+        "yellow",
+        "purple",
+        "orange",
+        "pink",
+      ];
+      let currentColorIndex = 0;
+      let changeColorButton = document.getElementById("thayDoiMauNenTuDong");
+      function autorun() {
+        let body = document.body;
+        body.style.backgroundColor = colors[currentColorIndex];
+
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
+        console.log(currentColorIndex);
+        
+      }
+
+    </script>
+  </body>
+</html>
